@@ -27,6 +27,27 @@ public class Main {
 
             System.out.println("The minimum element of array is " + result);
             System.out.println("Time taken in milliseconds: " + duration);
+        }
+
+
+        if (problem == 2) {
+            System.out.print("Enter the number of elements (n): ");
+            int n = scanner.nextInt();
+            ArrayList<Integer> arr = new ArrayList<>();
+
+            System.out.println("Enter " + n + " elements:");
+            for (int i = 0; i < n; i++) {
+                arr.add(scanner.nextInt());
+            }
+
+
+            double startTime = System.nanoTime();
+            double result = problemController.averageOfArray(arr);
+            double endTime = System.nanoTime();
+            double duration = (endTime - startTime) / 1000000;
+
+            System.out.println("The average number of array is: " + result);
+            System.out.println("Time taken in milliseconds: " + duration);
 
         }
 
