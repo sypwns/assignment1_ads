@@ -97,5 +97,19 @@ public class ProblemController {
         }
         return  calculateFib(n-1) + calculateFib(n-2);
     }
+    /**
+     * Problem 6
+     * This method finds power of a to n
+     * It uses recursive approach
+     * Time complexity: 0(n), n is the input number.
+     * The recursive algorithm iterates through all numbers from n to resulting in linear time complexity.
+     *
+     * @param a, n The number a is powered to number n
+     * @return The power a of to n
+     */
+    public static int power(int a, int n) {
+        if (n == 0) return 1;
+        else return a * power(a, n - 1);
+    }
 
 }

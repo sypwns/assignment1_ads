@@ -92,6 +92,19 @@ public class Main {
             System.out.println("The fibonacci number is: " + result);
             System.out.println("Time taken in milliseconds: " + duration);
         }
+        if (problem == 6) {
+            System.out.println("Enter 2 numbers:");
+            int n = scanner.nextInt();
+            int k = scanner.nextInt();
+
+            double startTime = System.nanoTime();
+            int result = problemController.power(n, k);
+            double endTime = System.nanoTime();
+            double duration = (endTime - startTime) / 1000000;
+
+            System.out.println("The power of numbers is: " + result);
+            System.out.println("Time taken in milliseconds: " + duration);
+        }
 
     }
 }
