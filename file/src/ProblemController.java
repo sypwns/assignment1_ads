@@ -111,5 +111,18 @@ public class ProblemController {
         if (n == 0) return 1;
         else return a * power(a, n - 1);
     }
+    /**
+     * Problem 7
+     * This method reverses array
+     * It uses recursive approach
+     * Time complexity: 0(n), n and n numbers as input.
+     * The recursive algorithm iterates through all numbers from n to resulting in linear time complexity.
 
+     * @param index, array The number n-1 is index of arr
+     */
+    public static void reverse(int[] arr, int index) {
+        if (index < 0) return;
+        System.out.print(arr[index] + " ");
+        reverse(arr, index - 1);
+    }
 }

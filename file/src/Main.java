@@ -105,6 +105,25 @@ public class Main {
             System.out.println("The power of numbers is: " + result);
             System.out.println("Time taken in milliseconds: " + duration);
         }
+        if (problem == 7) {
+            System.out.print("Enter the number of elements (n): ");
+            int n = scanner.nextInt();
+            int[] arr = new int[n];
+
+            System.out.println("Enter " + n + " elements:");
+            for (int i = 0; i < n; i++) {
+                arr[i] = scanner.nextInt();
+            }
+
+
+            double startTime = System.nanoTime();
+            System.out.println("The reversed array is: ");
+            problemController.reverse(arr, n-1);
+            double endTime = System.nanoTime();
+            double duration = (endTime - startTime) / 1000000;
+
+            System.out.println("\nTime taken in milliseconds: " + duration);
+        }
 
     }
 }
