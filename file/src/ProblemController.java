@@ -44,4 +44,27 @@ public class ProblemController {
 
         return summ / arr.size();
     }
+
+
+    /**
+     * Problem 3
+     * This method checks if the given number is prime or composite
+     * It uses for loop
+     * Time complexity: O(n), n is input number
+     * For loop iterates through 2 to number itself
+     *
+     * @param n The number that is checked
+     * @return 1 or 0, depending on count
+     */
+    public static int isPrime(int n) {
+        int counter = 0;
+        for (int i = 2; i <= n; i++) {
+            if (n % i == 0) {
+                counter++;
+            }
+        }
+
+        if (counter == 1) return 1;
+        else return 0;
+    }
 }
