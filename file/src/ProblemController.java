@@ -67,4 +67,18 @@ public class ProblemController {
         if (counter == 1) return 1;
         else return 0;
     }
+    /**
+     * Problem 4
+     * This method calculates the factorial of a given number
+     * It uses recursive approach
+     * Time complexity: 0(n), where n is the input number.
+     * The recursive algorithm iterates through all numbers from n to resulting in linear time complexity.
+     *
+     * @param n The number for which the factorial is to be calculated.
+     * @return The factorial of the given number
+     */
+    public static int factorial(int n) {
+        if (n == 1 || n == 0) return 1;
+        else return n * factorial(n - 1);
+    }
 }

@@ -66,6 +66,19 @@ public class Main {
                 System.out.println("No, it composite number");
 
             System.out.println("Time taken in milliseconds: " + duration);
+
+        }
+        if (problem == 4) {
+            System.out.println("Enter number for checking:");
+            int n = scanner.nextInt();
+
+            double startTime = System.nanoTime();
+            int result = problemController.factorial(n);
+            double endTime = System.nanoTime();
+            double duration = (endTime - startTime) / 1000000;
+
+            System.out.println("The factorial of your number is: " + result);
+            System.out.println("Time taken in milliseconds: " + duration);
         }
 
     }
