@@ -153,4 +153,17 @@ public class ProblemController {
         if (k == 0 || k == n) return 1;
         return binomialCoeff(n - 1, k - 1) + binomialCoeff(n - 1, k);
     }
+    /**
+     * Problem 10
+     * This method calculates GCD(a, b)
+     * It uses recursive approach
+     * Time complexity: 0(log min(a, b)), a and b as inputs
+     *
+     * @param a, b The numbers for calculation
+     * @return gcd , number - Greatest common divisor
+     */
+    public static int gcd(int a, int b) {
+        if (b == 0) return a;
+        return gcd(b, a % b);
+    }
 }

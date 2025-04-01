@@ -152,6 +152,19 @@ public class Main {
             System.out.println("The binomial coefficient is: " + result);
             System.out.println("Time taken in milliseconds: " + duration);
         }
+        if (problem == 10) {
+            System.out.print("Enter 2 numbers: ");
+            int a = scanner.nextInt();
+            int b = scanner.nextInt();
+
+            double startTime = System.nanoTime();
+            int result = problemController.gcd(a, b);
+            double endTime = System.nanoTime();
+            double duration = (endTime - startTime) / 1000000;
+
+            System.out.println("The Greatest Common Divisor is: " + result);
+            System.out.println("Time taken in milliseconds: " + duration);
+        }
 
     }
 }
