@@ -139,6 +139,19 @@ public class Main {
                 System.out.println("No, it contains non-digits");
             System.out.println("Time taken in milliseconds: " + duration);
         }
+        if (problem == 9) {
+            System.out.print("Enter 2 correct numbers for finding binomial coefficient: ");
+            int n = scanner.nextInt();
+            int k = scanner.nextInt();
+
+            double startTime = System.nanoTime();
+            int result = problemController.binomialCoeff(n, k);
+            double endTime = System.nanoTime();
+            double duration = (endTime - startTime) / 1000000;
+
+            System.out.println("The binomial coefficient is: " + result);
+            System.out.println("Time taken in milliseconds: " + duration);
+        }
 
     }
 }
