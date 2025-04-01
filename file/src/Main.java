@@ -124,6 +124,21 @@ public class Main {
 
             System.out.println("\nTime taken in milliseconds: " + duration);
         }
+        if (problem == 8) {
+            System.out.print("Enter string for checking: ");
+            String s = scanner.next();
+
+            double startTime = System.nanoTime();
+            boolean result = problemController.isAllDigits(s, 0);
+            double endTime = System.nanoTime();
+            double duration = (endTime - startTime) / 1000000;
+
+            if (result)
+                System.out.println("Yes, it is all digits");
+            else
+                System.out.println("No, it contains non-digits");
+            System.out.println("Time taken in milliseconds: " + duration);
+        }
 
     }
 }

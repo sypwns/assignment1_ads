@@ -125,4 +125,19 @@ public class ProblemController {
         System.out.print(arr[index] + " ");
         reverse(arr, index - 1);
     }
+    /**
+     * Problem 8
+     * This method check if String consists only of digits
+     * It uses recursive approach
+     * Time complexity: 0(n)
+     * It iterates through the string
+     *
+     * @param s, index The s is some string that would be checked and index is its every element
+     * @return true or false
+     */
+    public static boolean isAllDigits(String s, int index) {
+        if (index == s.length()) return true;
+        if (!Character.isDigit(s.charAt(index))) return false;
+        return isAllDigits(s, index + 1);
+    }
 }
