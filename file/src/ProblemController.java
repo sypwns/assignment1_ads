@@ -81,4 +81,21 @@ public class ProblemController {
         if (n == 1 || n == 0) return 1;
         else return n * factorial(n - 1);
     }
+    /**
+     * Problem 5
+     * This method finds n-th elements in Fibonacci sequence
+     * It uses recursive approach
+     * Time complexity: 0(n), where n is the input number.
+     * The recursive algorithm iterates through all numbers from n to resulting in linear time complexity.
+     *
+     * @param n The number is nth element in sequence
+     *@return The fibonacci number of the given number
+     */
+    public static int calculateFib(int n) {
+        if(n == 1 || n == 0){
+            return n;
+        }
+        return  calculateFib(n-1) + calculateFib(n-2);
+    }
+
 }
